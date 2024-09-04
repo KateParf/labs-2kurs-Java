@@ -1,0 +1,64 @@
+HBox {
+    -fx-background-color: #d4e1f4;
+    -fx-font-family: 'Century Gothic';
+}
+VBox {
+    -fx-background-color: #d4e1f4;
+    -fx-font-family: 'Century Gothic';
+}
+AnchorPane {
+    -fx-background-color: #d4e1f4;
+    -fx-font-family: 'Century Gothic';
+}
+
+Button {
+  -fx-background-color: #a4c2f7;
+  -fx-border-radius: 3px;
+  -fx-box-sizing: border-box;
+  -fx-border-color: #7db0ff;
+  -fx-font-size: 13px;
+}
+Button:hover,
+Button:focus,
+Button:active {
+  -fx-background-color: #d4e1f4;
+}
+
+Label#tblLabel {
+    -fx-font-size: 14px;
+}
+
+ComboBox {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 3px;
+    -fx-box-sizing: border-box;
+}
+
+.table-view .column-header {
+    -fx-background-color: #a4c2f7;
+    -fx-box-sizing: border-box;
+    -fx-border-color: #d4e1f4;
+}
+.table-row-cell {
+    -fx-selection-bar: #7db0ff;
+    -fx-selection-bar-non-focused: #a4c2f7;
+}
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to bottom, #a4c2f7, #d4e1f4);
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #a4c2f7, #d4e1f4);
+}
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}

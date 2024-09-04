@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+
+<!-- создание табл ф-ции по математической -->
+
+<VBox spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.CreateByFuncController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <VBox spacing="5.0">
+        <Label text="Выберите тип функции"/>
+        <ComboBox fx:id="funcType"  maxWidth="165"/>
+    </VBox>
+
+    <HBox spacing="20.0">
+        <VBox>
+            <Label text="X начальное"/>
+            <TextField fx:id="Xstart" maxWidth="60" text="0"/>
+        </VBox>
+
+        <VBox>
+            <Label text="X конечное"/>
+            <TextField fx:id="Xend" maxWidth="60" text="10"/>
+        </VBox>
+
+        <VBox>
+            <Label text="Количество значений"/>
+            <TextField fx:id="pointsCnt" maxWidth="60" text="10"/>
+        </VBox>
+    </HBox>
+
+    <Button fx:id="createButton" text="Создать" minWidth="100" onAction="#onCreateButtonClick"/>
+</VBox>

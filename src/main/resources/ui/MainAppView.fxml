@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.MainAppController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label>
+        <graphic>
+            <ImageView fitHeight="100.0" fitWidth="100.0" >
+                <Image url="@./img/germ.png" />
+            </ImageView>
+        </graphic>
+        <VBox.margin>
+            <Insets bottom="10"/>
+        </VBox.margin>
+    </Label>
+
+    <Button text="Операции над двумя функциями" onAction="#onOperationsButtonClick" minWidth="250"/>
+    <Button text="Дифференцирование функции" onAction="#onDiffButtonClick" minWidth="250"/>
+    <Button text="Интегрирование функции" onAction="#onIntegralButtonClick" minWidth="250"/>
+
+    <Button text="Настройки" onAction="#onSettingsButtonClick">
+        <VBox.margin>
+            <Insets top="10"/>
+        </VBox.margin>
+    </Button>
+</VBox>

@@ -1,0 +1,24 @@
+/** https://color.romanuke.com/czvetovaya-palitra-4379/ **/
+form{
+    font-family: 'Century Gothic';
+}
+::selection {
+    color: #1D323F;
+    background: #A1C7C7;
+}
+input:focus, select:focus {
+    border:#2D5D62 2px solid !important;
+    box-shadow: 0 0 10px #2D5D62 !important;
+}
+option:checked, option:hover{
+    background-color: #A1C7C7 !important;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Franklin Gothic Medium';
+    color: #1D323F !important;
+}
+.btn-primary{
+    color: #1D323F !important;
+    background-color: #A1C7C7 !important;
+    border:#A1C7C7  1px solid !important;
+}

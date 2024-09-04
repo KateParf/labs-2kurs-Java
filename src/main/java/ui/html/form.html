@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Tabulated Function Creator</title>
+    <link rel="stylesheet" href="page.css">
+    <!-- Обязательные метатеги для бутстрапа -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Подключение JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <div class="container justify-content-center align-items-center">
+        <div class="row"><div class="text-center col-12 mt-3">
+            <h2>Конструктор табулированных функций</h2>
+        </div></div>
+
+        <div class="row"><div class="container col-lg-8 col-12">
+        <form class="border rounded m-3 p-3 g-3" >
+            <div class="row">
+            <div class="col-12 col-sm-5 mt-0">
+                <label for="FuncSelect">Выберите тип функции</label>
+                <select multiple class="form-control" id="FuncSelect">
+                    <option>Линейная: y = x</option>
+                    <option>Квадрат: y = x²</option>
+                    <option>Константа: y = const </option>
+                    <option>Арктангенс: y = 2arctgx</option>
+                </select>
+            </div>
+            <div class="col-12 col-sm-4 mt-0">
+                <label for="validationTooltip01">Начальное значение&nbsp;x</label>
+                <input type="text" class="form-control" id="validationTooltip01" placeholder="First x" value="1" required>
+
+                <label for="validationTooltip02">Конечное значение&nbsp;x</label>
+                <input type="text" class="form-control" id="validationTooltip02" placeholder="Last x" value="2" required>
+            </div>
+            <div class="col-12 col-sm-3 mt-0">
+                <label for="validationTooltip03">Количество точек</label>
+                <input type="text" class="form-control" id="validationTooltip03" placeholder="Count of values" value="10" required>
+
+                <button type="submit" class="btn btn-primary mt-4" id="btnSubmit">Построить</button>
+            </div>
+            </div>
+        </form>
+        </div></div>
+    </div>
+    <img src ="../../../resources/ui/img/germ.png">
+
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.cell.TextFieldTableCell?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<!-- окошко операций над 2 ф-ми -->
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="ui.OperationsController" >
+    <HBox spacing="20.0"
+          AnchorPane.topAnchor="20"
+          AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20"
+          AnchorPane.bottomAnchor="20" >
+
+    <!-- панель 1 -->
+    <VBox spacing="10.0">
+
+        <Label id="tblLabel" text="Таблица 1"/>
+
+        <HBox spacing="7.0">
+
+            <VBox spacing="5.0">
+                <Button onAction="#onCreateManualFunc1ButtonClick">
+                    <tooltip><Tooltip text="Задать руками" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/manual.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button onAction="#onCreateMathFunc1ButtonClick">
+                    <tooltip><Tooltip text="Задать мат функцию" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/formula.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button onAction="#onAddPointToFunc1ButtonClick">
+                    <VBox.margin>
+                        <Insets><top>10</top></Insets>
+                    </VBox.margin>
+                    <tooltip><Tooltip text="Добавить значение" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/insert.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button onAction="#onDelPointFromFunc1ButtonClick">
+                    <VBox.margin>
+                        <Insets><bottom>10</bottom></Insets>
+                    </VBox.margin>
+                    <tooltip><Tooltip text="Удалить значение" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/remove.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button onAction="#onReadButton1Click">
+                    <tooltip><Tooltip text="Загрузить" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/download.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button onAction="#onSaveButton1Click">
+                    <tooltip><Tooltip text="Сохранить" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/save.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+
+            <TableView fx:id="table1" prefWidth="210.0" prefHeight="1000" editable="true">
+                <placeholder><Label text=" Нет данных "/></placeholder>
+                <columns>
+                    <TableColumn prefWidth="50.0" text="X" fx:id="XColumn">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="x" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="50.0" text="Y" fx:id="YColumn" editable="true" onEditCommit="#colEdit">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="Ystr" />
+                        </cellValueFactory>
+                        <cellFactory><TextFieldTableCell fx:factory="forTableColumn" /></cellFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+
+        </HBox>
+    </VBox>
+
+    <!-- панель 2 -->
+    <VBox spacing="10.0">
+        <Label id="tblLabel" text="Таблица 2"/>
+
+        <HBox spacing="7.0">
+            <VBox spacing="5.0">
+                <Button onAction="#onCreateManualFunc2ButtonClick">
+                    <tooltip><Tooltip text="Задать руками" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/manual.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button onAction="#onCreateMathFunc2ButtonClick">
+                    <tooltip><Tooltip text="Задать мат функцию" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/formula.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button onAction="#onAddPointToFunc2ButtonClick">
+                    <VBox.margin>
+                        <Insets><top>10</top></Insets>
+                    </VBox.margin>
+                    <tooltip><Tooltip text="Добавить значение" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/insert.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button onAction="#onDelPointFromFunc2ButtonClick">
+                    <VBox.margin>
+                        <Insets><bottom>10</bottom></Insets>
+                    </VBox.margin>
+                    <tooltip><Tooltip text="Удалить значение" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/remove.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button onAction="#onReadButton2Click">
+                    <tooltip><Tooltip text="Загрузить" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/download.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button onAction="#onSaveButton2Click">
+                    <tooltip><Tooltip text="Сохранить" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/save.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+
+            <TableView fx:id="table2" prefWidth="210.0" prefHeight="1000" editable="true">
+                <placeholder><Label text=" Нет данных "/></placeholder>
+                <columns>
+                    <TableColumn prefWidth="50.0" text="X" fx:id="XfColumn">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="x" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="50.0" text="Y" fx:id="YfColumn" editable="true" onEditCommit="#colEdit">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="Ystr" />
+                        </cellValueFactory>
+                        <cellFactory><TextFieldTableCell fx:factory="forTableColumn" /></cellFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </HBox>
+    </VBox>
+
+    <!-- панель 3 -->
+    <VBox spacing="10.0">
+        <Label id="tblLabel" text="Результат"/>
+        <HBox spacing="7.0">
+            <VBox spacing="5.0">
+                <Button onAction="#onPlusButtonClick">
+                    <tooltip><Tooltip text="Сложение" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/plus.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button  onAction="#onMinusButtonClick">
+                    <tooltip><Tooltip text="Вычитание" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/minus.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button  onAction="#onMultButtonClick">
+                    <tooltip><Tooltip text="Умножение" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/mul.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button  onAction="#onDivButtonClick">
+                    <tooltip><Tooltip text="Деление" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/division.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button onAction="#onSaveButton3Click">
+                    <tooltip><Tooltip text="Сохранить" /></tooltip>
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" >
+                            <Image url="@./img/save.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+
+            <TableView fx:id="table3" prefWidth="210.0" prefHeight="1000">
+                <columns>
+                    <TableColumn prefWidth="50.0" text="X" fx:id="XresColumn">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="x" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn prefWidth="50.0" text="Y" fx:id="YresColumn">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="y" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </HBox>
+    </VBox>
+
+</HBox>
+</AnchorPane>
